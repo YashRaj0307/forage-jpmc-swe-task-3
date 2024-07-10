@@ -32,7 +32,7 @@ class Graph extends Component<IProps, {}> {
       trigger_alert: 'float',
       };
 
-    if (window.perspective ) {
+    if (window.perspective && window.perspective.worker() ) {
       this.table = window.perspective.worker().table(schema);
     }
     if (this.table) {
